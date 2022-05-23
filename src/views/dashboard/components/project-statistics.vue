@@ -24,10 +24,8 @@ export default {
           },
         },
         legend: {
-          textStyle: {
-            color: "rgba(255,255,255,.5)",
-            fontSize: "12",
-          },
+          color: "rgba(255,255,255,.5)",
+          fontSize: "12",
         },
         grid: {
           left: "3%",
@@ -38,10 +36,8 @@ export default {
         xAxis: {
           type: "category",
           axisLabel: {
-            textStyle: {
-              color: "rgba(255,255,255,.6)",
-              fontSize: 12,
-            },
+            color: "rgba(255,255,255,.6)",
+            fontSize: 12,
           },
           axisLine: {
             lineStyle: {
@@ -60,10 +56,8 @@ export default {
               },
             },
             axisLabel: {
-              textStyle: {
-                color: "rgba(255,255,255,.6)",
-                fontSize: 12,
-              },
+              color: "rgba(255,255,255,.6)",
+              fontSize: 12,
             },
             splitLine: {
               lineStyle: {
@@ -80,10 +74,8 @@ export default {
               },
             },
             axisLabel: {
-              textStyle: {
-                color: "rgba(255,255,255,.6)",
-                fontSize: 12,
-              },
+              color: "rgba(255,255,255,.6)",
+              fontSize: 12,
             },
 
             splitLine: {

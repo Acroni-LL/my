@@ -57,7 +57,7 @@ export default {
 
 .drawer-bg {
   background: #000;
-  opacity: 0.3;
+  // opacity: 0.3;  //意义不明
   width: 100%;
   top: 0;
   height: 100%;

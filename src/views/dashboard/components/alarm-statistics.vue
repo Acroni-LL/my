@@ -44,11 +44,9 @@ export default {
           top: "4%",
           textAlign: "center",
           left: "49%",
-          textStyle: {
-            color: "#fff",
-            fontSize: 16,
-            fontWeight: "400",
-          },
+          color: "#fff",
+          fontSize: 16,
+          fontWeight: "400",
         },
         tooltip: {
           trigger: "item",
@@ -66,12 +64,12 @@ export default {
             // radius: [105, 109],
             center: ["50%", "42%"],
             radius: ["40%", "60%"],
-            hoverAnimation: false,
+            emphasis: {
+              scale: false,
+            },
             itemStyle: {
-              normal: {
-                label: {
-                  show: false,
-                },
+              label: {
+                show: false,
               },
             },
             data: [
@@ -81,22 +79,18 @@ export default {
                 color: "#53C0F9",
 
                 itemStyle: {
-                  normal: {
-                    borderWidth: 5,
-                    color: "#53C0F9",
-                    shadowBlur: 20,
-                  },
+                  borderWidth: 5,
+                  color: "#53C0F9",
+                  shadowBlur: 20,
                 },
               },
               {
                 value: 100 - val,
                 name: "C",
                 itemStyle: {
-                  normal: {
-                    color: "rgba(0, 0, 0, 0)",
-                    borderColor: "rgba(0, 0, 0, 0)",
-                    borderWidth: 0,
-                  },
+                  color: "rgba(0, 0, 0, 0)",
+                  borderColor: "rgba(0, 0, 0, 0)",
+                  borderWidth: 0,
                 },
               },
             ],
@@ -113,11 +107,9 @@ export default {
           top: "4%",
           textAlign: "center",
           left: "49%",
-          textStyle: {
-            color: "#fff",
-            fontSize: 16,
-            fontWeight: "400",
-          },
+          color: "#fff",
+          fontSize: 16,
+          fontWeight: "400",
         },
         tooltip: {
           trigger: "item",
@@ -134,12 +126,12 @@ export default {
             startAngle: 80,
             center: ["50%", "42%"],
             radius: ["40%", "60%"],
-            hoverAnimation: false,
+            emphasis: {
+              scale: false,
+            },
             itemStyle: {
-              normal: {
-                label: {
-                  show: false,
-                },
+              label: {
+                show: false,
               },
             },
             data: [
@@ -149,22 +141,18 @@ export default {
                 color: "#53C0F9",
 
                 itemStyle: {
-                  normal: {
-                    borderWidth: 5,
-                    color: "#1AD8BA",
-                    shadowBlur: 20,
-                  },
+                  borderWidth: 5,
+                  color: "#1AD8BA",
+                  shadowBlur: 20,
                 },
               },
               {
                 value: 100 - val,
                 name: "C",
                 itemStyle: {
-                  normal: {
-                    color: "rgba(0, 0, 0, 0)",
-                    borderColor: "rgba(0, 0, 0, 0)",
-                    borderWidth: 0,
-                  },
+                  color: "rgba(0, 0, 0, 0)",
+                  borderColor: "rgba(0, 0, 0, 0)",
+                  borderWidth: 0,
                 },
               },
             ],
@@ -181,11 +169,9 @@ export default {
           top: "4%",
           textAlign: "center",
           left: "49%",
-          textStyle: {
-            color: "#fff",
-            fontSize: 16,
-            fontWeight: "400",
-          },
+          color: "#fff",
+          fontSize: 16,
+          fontWeight: "400",
         },
         tooltip: {
           trigger: "item",
@@ -202,12 +188,12 @@ export default {
             startAngle: 80,
             center: ["50%", "42%"],
             radius: ["40%", "60%"],
-            hoverAnimation: false,
+            emphasis: {
+              scale: false,
+            },
             itemStyle: {
-              normal: {
-                label: {
-                  show: false,
-                },
+              label: {
+                show: false,
               },
             },
             data: [
@@ -217,22 +203,18 @@ export default {
                 color: "#53C0F9",
 
                 itemStyle: {
-                  normal: {
-                    borderWidth: 5,
-                    color: "#D97C09",
-                    shadowBlur: 20,
-                  },
+                  borderWidth: 5,
+                  color: "#D97C09",
+                  shadowBlur: 20,
                 },
               },
               {
                 value: 100 - val,
                 name: "C",
                 itemStyle: {
-                  normal: {
-                    color: "rgba(0, 0, 0, 0)",
-                    borderColor: "rgba(0, 0, 0, 0)",
-                    borderWidth: 0,
-                  },
+                  color: "rgba(0, 0, 0, 0)",
+                  borderColor: "rgba(0, 0, 0, 0)",
+                  borderWidth: 0,
                 },
               },
             ],

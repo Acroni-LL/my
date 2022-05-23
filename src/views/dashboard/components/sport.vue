@@ -37,10 +37,8 @@ export default {
             type: "category",
             boundaryGap: false,
             axisLabel: {
-              textStyle: {
-                color: "rgba(255,255,255,.6)",
-                fontSize: 12,
-              },
+              color: "rgba(255,255,255,.6)",
+              fontSize: 12,
             },
             axisLine: {
               lineStyle: {
@@ -67,10 +65,8 @@ export default {
               },
             },
             axisLabel: {
-              textStyle: {
-                color: "rgba(255,255,255,.6)",
-                fontSize: 12,
-              },
+              color: "rgba(255,255,255,.6)",
+              fontSize: 12,
               // eslint-disable-next-line no-unused-vars
               formatter: (v, i) => {
                 if (v <= 10000) {
@@ -97,39 +93,33 @@ export default {
             symbolSize: 5,
             showSymbol: false,
             lineStyle: {
-              normal: {
-                color: "#0184d5",
-                width: 2,
-              },
+              color: "#0184d5",
+              width: 2,
             },
             areaStyle: {
-              normal: {
-                color: new this.$echarts.graphic.LinearGradient(
-                  0,
-                  0,
-                  0,
-                  1,
-                  [
-                    {
-                      offset: 0,
-                      color: "rgba(1, 132, 213, 0.4)",
-                    },
-                    {
-                      offset: 0.8,
-                      color: "rgba(1, 132, 213, 0.1)",
-                    },
-                  ],
-                  false
-                ),
-                shadowColor: "rgba(0, 0, 0, 0.1)",
-              },
+              color: new this.$echarts.graphic.LinearGradient(
+                0,
+                0,
+                0,
+                1,
+                [
+                  {
+                    offset: 0,
+                    color: "rgba(1, 132, 213, 0.4)",
+                  },
+                  {
+                    offset: 0.8,
+                    color: "rgba(1, 132, 213, 0.1)",
+                  },
+                ],
+                false
+              ),
+              shadowColor: "rgba(0, 0, 0, 0.1)",
             },
             itemStyle: {
-              normal: {
-                color: "#0184d5",
-                borderColor: "rgba(221, 220, 107, .1)",
-                borderWidth: 12,
-              },
+              color: "#0184d5",
+              borderColor: "rgba(221, 220, 107, .1)",
+              borderWidth: 12,
             },
             // data: listSteps,
           },

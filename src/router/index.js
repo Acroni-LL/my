@@ -6,9 +6,11 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/",
-    name: "index",
+    path: "",
     component: Layout,
+    redirect: {
+      name: "index",
+    },
     children: [
       {
         path: "/index",
