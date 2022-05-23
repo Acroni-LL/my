@@ -80,7 +80,7 @@ export default {
     return {
       loginForm: {
         username: "",
-        password: "",
+        password: "1111111",
         checked: false,
       },
       loginRules: {
@@ -97,17 +97,19 @@ export default {
   },
   methods: {
 handleLogin(){
-  if(this.btnStatus&&validatorLogin){
+  // if(this.btnStatus&&validatorLogin){
     this.$router.push('/')
-  }
+  // }
 },
   },
   computed: {
   },
   watch:{
+
   },
   mounted(){
-    console.log(this.$refs.password);
+    // console.log(this.$refs.password);
+    // console.log(this.$refs.loginForm.validate());
 
   }
 };

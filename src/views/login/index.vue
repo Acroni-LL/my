@@ -5,13 +5,13 @@
 </template>
 
 <script>
-import loginBox from './components/login-box.vue'
+import loginBox from "./components/login-box.vue";
 export default {
-name:'Login',
-components:{
-    loginBox
-}
-}
+  name: "Login",
+  components: {
+    loginBox,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -23,7 +23,7 @@ $light_gray: #eee;
   min-height: 100%;
   width: 100%;
   //background-color: $bg;
-  background: url('@/assets/common/loginBackground.svg');
+  background: url("@/assets/common/loginBackground.svg");
   background-size: cover;
   overflow: hidden;
   position: relative;

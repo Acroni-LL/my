@@ -78,19 +78,19 @@ module.exports = defineConfig({
   },
   configureWebpack: {
     resolve: {
-      // fallback: {
-      //   path: require.resolve("path-browserify"),
-      //   stream: require.resolve("readable-stream"),
-      //   crypto: require.resolve("crypto-browserify"),
-      //   perf_hooks: false,
-      //   module: false,
-      //   "@blueprintjs/core": false,
-      //   "@blueprintjs/icons": false,
-      //   domain: false,
-      //   fs: false,
-      //   pnpapi: false,
-      //   punycode: false,
-      // },
+      fallback: {
+        path: require.resolve("path-browserify"),
+        //   stream: require.resolve("readable-stream"),
+        //   crypto: require.resolve("crypto-browserify"),
+        //   perf_hooks: false,
+        //   module: false,
+        //   "@blueprintjs/core": false,
+        //   "@blueprintjs/icons": false,
+        //   domain: false,
+        //   fs: false,
+        //   pnpapi: false,
+        //   punycode: false,
+      },
     },
     module: {
       rules: [
