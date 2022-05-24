@@ -93,7 +93,7 @@ export default {
       btnText: '登录',
       btnStatus:false,
       validatorLogin:false,
-    };
+    }
   },
   methods: {
 handleLogin(){
@@ -107,10 +107,11 @@ handleLogin(){
   watch:{
 
   },
+  created(){
+  },
   mounted(){
     // console.log(this.$refs.password);
     // console.log(this.$refs.loginForm.validate());
-
   }
 };
 </script>

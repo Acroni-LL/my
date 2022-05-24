@@ -10,4 +10,9 @@ module.exports = {
    * @description Whether show the logo in sidebar
    */
   sidebarLogo: true,
+  /**
+   * @type {Number}
+   * @description token的超时时间(单位s),必须是整数
+   */
+  tokenOvertime: 1800,
 };
