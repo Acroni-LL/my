@@ -1,19 +1,22 @@
 <template>
   <el-card>
-    <el-table :data="employee.list">
-      <el-table-column align="center" label="#" type="index" />
-      <el-table-column align="center" label="姓名" prop="name" />
-      <el-table-column align="center" label="电话" prop="phone" />
-      <el-table-column align="center" label="部门" prop="department" />
-      <el-table-column align="center" label="工号" prop="userNo" />
-      <el-table-column align="center" label="工号" prop="userNo" />
+    <el-table :data="employee.index" style="width: 100%">
+      <el-table-column align="center" label="#" type="index" width="55px" />
+      <el-table-column align="center" label="姓名" prop="name" width="55px" />
+      <el-table-column align="center" label="电话" prop="phone" width="120px" />
+      <el-table-column
+        align="center"
+        label="部门"
+        prop="department"
+        width="55px"
+      />
+      <el-table-column align="center" label="工号" prop="userNo" width="80px" />
       <el-table-column align="center" label="入职时间" prop="createTime" />
       <el-table-column align="center" label="账号" prop="account" />
-      <el-table-column align="center" label="账号" prop="account" />
-      <el-table-column align="center" label="性别">
+      <el-table-column align="center" label="性别" width="55px">
         <template v-slot="{ row: { sex } }">
           <template v-if="sex === 0">女</template>
-          <template v-else-if="sex == 1">男</template>
+          <template v-else-if="sex === 1">男</template>
         </template>
       </el-table-column>
       <el-table-column align="center" label="操作" min-width="150px">

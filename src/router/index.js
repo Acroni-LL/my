@@ -32,7 +32,7 @@ const routes = [
   {
     path: "/user",
     component: Layout,
-    redirect: "/user/employee",
+    redirect: "/user/user",
     name: "users",
     meta: {
       icon: "users",

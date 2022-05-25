@@ -51,13 +51,14 @@ export default {
   /*min-height: calc(100vh - 50px);*/
   // background-color: #de5; // 无
 
-  width: 100%;
+  width: calc(100% - 210px);
   position: relative;
   overflow: scroll;
-  top: 50px;
+  // top: 50px;
+  left: 210px;
 
   &::-webkit-scrollbar {
-    display: block;
+    display: none;
   }
 }
 

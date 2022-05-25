@@ -7,13 +7,13 @@
       <el-table-column align="center" label="性别">
         <template v-slot="{ row: { sex } }">
           <template v-if="sex == 1">男</template>
-          <template v-else-if="sex == 2">女</template>
+          <template v-else-if="sex == 0">女</template>
         </template>
       </el-table-column>
       <el-table-column align="center" label="会员">
         <template v-slot="{ row: { vip } }">
           <el-tag v-if="vip == 1" type="success">是</el-tag>
-          <el-tag v-else-if="vip == 2" type="warning">否</el-tag>
+          <el-tag v-else-if="vip == 0" type="warning">否</el-tag>
         </template>
       </el-table-column>
       <el-table-column align="center" label="生日" prop="birthday" />

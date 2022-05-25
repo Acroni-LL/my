@@ -1,5 +1,5 @@
 <template>
-  <search-header>
+  <search-header v-sticky="10">
     <div class="top-header-in">
       <div>
         <el-autocomplete
@@ -61,9 +61,11 @@ export default {
     },
     getData() {
       this.$emit("change-loading", true);
-      getEmployee(this.search)
+      //getEmployee(this.search)  //原始值
+      getEmployee()
         .then(({ data }) => {
           this.$emit("show-data", data);
+          console.log(data);
         })
         .catch((e) => e)
         .finally(() => {
@@ -77,4 +79,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+search-header {
+  width: 100%;
+}
+</style>
