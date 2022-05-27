@@ -65,7 +65,7 @@ export default {
       getEmployee()
         .then(({ data }) => {
           this.$emit("show-data", data);
-          console.log(data);
+          // console.log(data);
         })
         .catch((e) => e)
         .finally(() => {

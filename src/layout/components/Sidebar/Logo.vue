@@ -1,9 +1,13 @@
 <template>
   <div :class="{ collapse: collapse }" class="sidebar-logo-container">
     <transition name="sidebarLogoFade">
-      <div key="collapse" class="sidebar-logo-link" to="/">
+      <div v-if="collapse" key="collapse" class="sidebar-logo-link" to="/">
         <!--        <img v-if="logo" :src="logo" alt="" class="sidebar-logo">-->
         <!--        <h1 class="sidebar-title">{{ title }} </h1>-->
+      </div>
+      <div v-else key="expand" class="sidebar-logo-link" to="/">
+        <!--        <img v-if="logo" :src="logo" alt="" class="sidebar-logo">-->
+        <h1 class="sidebar-title">{{ title }}</h1>
       </div>
     </transition>
   </div>
@@ -18,15 +22,36 @@ export default {
       type: Boolean,
       required: true,
     },
+    props: {
+      collapse: {
+        type: Boolean,
+        required: true,
+      },
+    },
+    data() {
+      return {
+        title: "综合定位服务管理平台",
+        logo: "https://wpimg.wallstcn.com/69a1c46c-eb1c-4b46-8bd4-e9e686ef5251.png",
+      };
+    },
+    computed: {
+      sidebar() {
+        // return this.$store.state.app.sidebar;
+        return true;
+      },
+      // device() {
+      //   return this.$store.state.app.device;
+      // },
+    },
+    methods: {
+      // handleClickOutside() {
+      //   this.$store.dispatch("app/closeSideBar", { withoutAnimation: false });
+      // },
+      // toggleSideBar() {
+      //   this.$store.dispatch("app/toggleSideBar");
+      // },
+    },
   },
-  data() {
-    return {
-      title: "综合定位服务管理平台",
-      logo: "https://wpimg.wallstcn.com/69a1c46c-eb1c-4b46-8bd4-e9e686ef5251.png",
-    };
-  },
-  computed: {},
-  methods: {},
 };
 </script>
 

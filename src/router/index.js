@@ -32,7 +32,7 @@ const routes = [
   {
     path: "/user",
     component: Layout,
-    redirect: "/user/user",
+    redirect: "/user",
     name: "users",
     meta: {
       icon: "users",
@@ -88,6 +88,11 @@ const routes = [
       // },
     ],
   },
+  // 实验用
+  // {
+  //   path: "/test",
+  //   component: () => import("@/views/test/test1"),
+  // },
 ];
 
 const router = new VueRouter({

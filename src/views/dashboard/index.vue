@@ -4,19 +4,22 @@
       <title-box />
     </div>
     <div class="index-body">
-      <div class="index-body-item">
+      <!-- <div class="index-body-item">
         <personnel-location-statistics />
-      </div>
+      </div> -->
       <div class="index-body-item">
         <personnel-statistics />
       </div>
-      <div class="index-body-item">
+      <!-- <div class="index-body-item">
         <broadcast-statistics />
-      </div>
+      </div> -->
       <div class="index-body-item">
         <attendance />
       </div>
       <div class="index-body-item">
+        <line-demo />
+      </div>
+      <!-- <div class="index-body-item">
         <alarm-statistics />
       </div>
       <div class="index-body-item">
@@ -30,7 +33,7 @@
       </div>
       <div class="index-body-item">
         <sport />
-      </div>
+      </div> -->
     </div>
   </div>
   <!-- <div v-else class="mobile">
@@ -72,31 +75,33 @@
 
 <script>
 import titleBox from "./components/title";
-import AlarmStatistics from "./components/alarm-statistics";
+// import AlarmStatistics from "./components/alarm-statistics";
 import PersonnelStatistics from "./components/personnel-statistics";
-import PersonnelLocationStatistics from "./components/personnel-location-statistics";
-import PersonnelStayStatistics from "./components/personnel-stay-statistics";
-import EpidemicControl from "./components/epidemic-control";
+// import PersonnelLocationStatistics from "./components/personnel-location-statistics";
+// import PersonnelStayStatistics from "./components/personnel-stay-statistics";
+// import EpidemicControl from "./components/epidemic-control";
 import Attendance from "./components/attendance";
-import BroadcastStatistics from "./components/broadcast-statistics";
-import ProjectStatistics from "./components/project-statistics";
-import Sport from "./components/sport";
+// import BroadcastStatistics from "./components/broadcast-statistics";
+// import ProjectStatistics from "./components/project-statistics";
+// import Sport from "./components/sport";
+import lineDemo from "./demo/line-demo";
 // 获取设置中title设置给平台
 import { title } from "@/settings";
 
 export default {
   name: "Index",
   components: {
+    lineDemo,
     titleBox,
-    AlarmStatistics,
+    // AlarmStatistics,
     PersonnelStatistics,
-    PersonnelLocationStatistics,
-    PersonnelStayStatistics,
-    EpidemicControl,
+    // PersonnelLocationStatistics,
+    // PersonnelStayStatistics,
+    // EpidemicControl,
     Attendance,
-    BroadcastStatistics,
-    ProjectStatistics,
-    Sport,
+    // BroadcastStatistics,
+    // ProjectStatistics,
+    // Sport,
   },
   computed: {},
   data() {

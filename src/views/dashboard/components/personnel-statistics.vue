@@ -1,22 +1,22 @@
 <template>
-  <div class="t-i-container">
+  <div class="t-i-container" v-if="PersonnelStatisticsData.data">
     <div class="t-i-row">
       <div class="t-i-block">
-        <div class="top">9999</div>
+        <div class="top">{{ PersonnelStatisticsData.data.arive }}</div>
         <div class="bottom">今日到园人数</div>
       </div>
       <div class="t-i-block">
-        <div class="top">200</div>
+        <div class="top">{{ PersonnelStatisticsData.data.leave }}</div>
         <div class="bottom">今日离园人数</div>
       </div>
     </div>
     <div class="t-i-row">
       <div class="t-i-block">
-        <div class="top">9999</div>
+        <div class="top">{{ PersonnelStatisticsData.data.reported }}</div>
         <div class="bottom">体温上报人数</div>
       </div>
       <div class="t-i-block">
-        <div class="top">0</div>
+        <div class="top">{{ this.PersonnelStatisticsData.data.error }}</div>
         <div class="bottom">体温异常人数</div>
       </div>
     </div>
@@ -24,8 +24,24 @@
 </template>
 
 <script>
+import { getPersonnelStatisticsData } from "@/api/dashboard/PersonnelStatistics";
 export default {
   name: "PersonnelStatistics",
+  data() {
+    return {
+      PersonnelStatisticsData: "",
+    };
+  },
+  created() {
+    getPersonnelStatisticsData().then((response) => {
+      this.PersonnelStatisticsData = response.data; // ??????
+      // console.log(
+      //   "this.PersonnelStatisticsData:",
+      //   this.PersonnelStatisticsData
+      // );
+      // console.log("response.data:", response);
+    });
+  },
 };
 </script>
 

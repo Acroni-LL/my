@@ -108,8 +108,12 @@ export default {
       if (isExternal(this.basePath)) {
         return this.basePath;
       }
+      // console.log(this.basePath, routePath);
       return path.resolve(this.basePath, routePath);
     },
+  },
+  mounted() {
+    // console.log("this is SidebarItem");
   },
 };
 </script>

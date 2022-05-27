@@ -69,6 +69,7 @@ export default {
   },
   mounted() {
     this.getData();
+    // console.log(this);
   },
   methods: {
     btnSearch() {
@@ -79,7 +80,7 @@ export default {
       this.$emit("change-loading", true);
       getUserList(this.search)
         .then(({ data }) => {
-          console.log(data);
+          // console.log(data);
           this.$emit("show-data", data);
         })
         .catch((e) => e)
