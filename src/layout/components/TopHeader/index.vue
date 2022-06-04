@@ -13,7 +13,7 @@
         <div class="name"></div>
         <el-dropdown class="avatar-container">
           <div class="avatar-wrapper">
-            <img src="" alt="" class="user-avatar" />
+            <img :src="avatar" alt="" class="user-avatar" />
             <i class="el-icon-caret-bottom" />
           </div>
           <el-dropdown-menu class="user-dropdown">
@@ -21,7 +21,7 @@
               <el-dropdown-item>首页</el-dropdown-item>
             </router-link>
             <el-dropdown-item>1</el-dropdown-item>
-            <el-dropdown-item>2</el-dropdown-item>
+            <el-dropdown-item>{{ username }}</el-dropdown-item>
             <el-dropdown-item
               ><span style="display: block">安全退出</span></el-dropdown-item
             >
@@ -35,6 +35,10 @@
 <script>
 export default {
   name: "TopHeader",
+  props: {
+    avatar: String,
+    username: String,
+  },
   components: {},
   data() {
     return {};

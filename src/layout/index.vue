@@ -5,7 +5,10 @@
       <!-- 带顶栏 -->
       <div class="hasTopHeader">
         <sidebar class="sidebar-container" style="top: 60px" />
-        <top-header />
+        <top-header
+          :avatar="this.$store.state.userInfo.avatar"
+          :username="this.$store.state.userInfo.name"
+        />
         <div class="main-container">
           <div class="fixed-top-header">
             <!-- <tags-view /> -->
@@ -21,6 +24,7 @@
 import TopHeader from "./components/TopHeader";
 import Sidebar from "./components/Sidebar";
 import AppMain from "./AppMain.vue";
+import { mapGetters } from "vuex";
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Layout",
@@ -34,7 +38,9 @@ export default {
     AppMain,
     Sidebar,
   },
-  computed: {},
+  computed: {
+    ...mapGetters(["userInfo"]),
+  },
   methods: {},
 };
 </script>

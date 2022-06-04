@@ -1,18 +1,18 @@
 <template>
   <div class="login-box">
-<login/>
+    <login />
   </div>
 </template>
 
 <script>
-import login from './login'
+import login from "./login";
 
 export default {
-  name: 'LoginBox',
+  name: "LoginBox",
   components: {
-    login
-  }
-}
+    login,
+  },
+};
 </script>
 <style lang="scss" scoped>
 .login-box {

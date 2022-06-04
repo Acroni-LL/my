@@ -10,6 +10,7 @@ import "@/icons"; // icon
 import Components from "@/components";
 import * as echarts from "echarts";
 import directives from "@/directives";
+import "@/permission";
 
 Vue.config.productionTip = false;
 
@@ -17,6 +18,7 @@ Vue.use(Components);
 Vue.use(ElementUI);
 Vue.prototype.$echarts = echarts;
 Vue.use(directives);
+Vue.use(store);
 
 new Vue({
   router,

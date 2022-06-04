@@ -29,6 +29,7 @@ service.interceptors.request.use(
         access_token: store.getters.token,
       });
     }
+    // console.log(config);
     return config;
   },
   (error) => {
