@@ -50,6 +50,7 @@ import path from "path";
 import { isExternal } from "@/utils/validate";
 import Item from "./Item";
 import AppLink from "./Link";
+import { mapGetters } from "vuex";
 
 export default {
   name: "SidebarItem",
@@ -114,6 +115,11 @@ export default {
   },
   mounted() {
     // console.log("this is SidebarItem");
+    console.log(this);
+    // console.log(item);
+  },
+  computed: {
+    ...mapGetters(["userInfo"]),
   },
 };
 </script>

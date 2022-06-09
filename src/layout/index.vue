@@ -25,6 +25,7 @@ import TopHeader from "./components/TopHeader";
 import Sidebar from "./components/Sidebar";
 import AppMain from "./AppMain.vue";
 import { mapGetters } from "vuex";
+// import asyncRouter from "@/router/asyncRouter";
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Layout",
@@ -41,7 +42,18 @@ export default {
   computed: {
     ...mapGetters(["userInfo"]),
   },
-  methods: {},
+  methods: {
+    // 拼接权限路由
+    // genRouter() {
+    //   this.$router.options.routes.push(...asyncRouter);
+    // },
+  },
+  beforeMount() {
+    // this.genRouter();
+  },
+  mounted() {
+    // console.log("layout", this);
+  },
 };
 </script>
 

@@ -2,19 +2,26 @@ import Vue from "vue";
 import Vuex from "vuex";
 // import Cookies from "js-cookie";
 import axios from "axios";
+import { formatRoleRoutes } from "@/utils/usual";
+import asyncRoutes from "@/router/asyncRoutes";
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
     userInfo: {},
+    roleRouter: {},
   },
   getters: {
     userInfo: (state) => state.userInfo,
+    roleRouter: (state) => state.roleRouter,
   },
   mutations: {
     SET_USERINFO(state, userInfo) {
       state.userInfo = userInfo;
+    },
+    SET_ROLEROUTER(state, roleRouter) {
+      state.roleRouter = roleRouter;
     },
   },
   actions: {
@@ -38,6 +45,11 @@ export default new Vuex.Store({
           return Promise.reject(() => {});
         }
       });
+    },
+    setRoleRouter({ commit }) {
+      const roleRouter = formatRoleRoutes(asyncRoutes);
+      console.log("into vuex action setRoleRouter,roleRouter:", roleRouter);
+      commit("SET_ROLEROUTER", roleRouter);
     },
   },
   modules: {},

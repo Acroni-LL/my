@@ -110,7 +110,9 @@ export default {
       deviceType: false,
     };
   },
-  mounted() {},
+  mounted() {
+    // console.log("Index", this);
+  },
 };
 </script>
 

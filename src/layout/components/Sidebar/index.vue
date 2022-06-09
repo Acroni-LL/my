@@ -35,8 +35,7 @@ export default {
     return {};
   },
   mounted() {
-    // console.log("$route:", this.$route);
-    // console.log("$routes:", this.$router.options.routes);
+    console.log("$routes:this.routes", this.routes[2]);
   },
   computed: {
     variables() {
@@ -48,7 +47,6 @@ export default {
     activeMenu() {
       const route = this.$route;
       const { meta, path } = route;
-      // console.log(route);
       // if set path, the sidebar will highlight the path you set
       if (meta.activeMenu) {
         return meta.activeMenu;

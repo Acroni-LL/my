@@ -72,6 +72,7 @@
 // import { login } from "@/api/user";
 import axios from "axios";
 import { mapGetters } from "vuex";
+import { handleLoginRoleRouter } from "@/utils/usual";
 // import qs from "qs";
 export default {
   /* eslint-disable*/
@@ -153,27 +154,26 @@ export default {
         // 可以通过_req.body拿到
       });
     },
-    handleLoginInfoFromVuexPOST(params){
-      this.$store.dispatch("getUserInfo",params)
-      .then(()=>{
-        this.$router.push('/index')
-      })
-      if(this.$store.state.userInfo){
-
-        // this.$router.push('/')
-      }
+    handleLoginInfoFromVuexPOST(params) {
+      new Promise((resolve) => {
+        this.$store.dispatch("getUserInfo", params).then(() => {});
+        resolve();
+      }).then((resolve) => {
+        handleLoginRoleRouter();
+        resolve();
+      }).catch(err=>{
+        new Error(err)
+      });
     },
   },
   computed: {
-    ...mapGetters(['userInfo'])
-
+    ...mapGetters(["userInfo"]),
   },
   watch: {},
-  created() {
-  },
+  created() {},
   mounted() {
     // imgTest()
-// console.log(this.img.a);
+    // console.log(this.img.a);
     // console.log(this.$refs.password);
     // console.log(this.$refs.loginForm.validate());
   },
