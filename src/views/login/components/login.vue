@@ -57,7 +57,7 @@
       <el-button
         style="width: 100%; margin-bottom: 20px"
         type="primary"
-        @click="handleLoginInfoFromVuexPOST(loginFormData)"
+        @click="handleLoginInfoFromVuexPOST(loginForm)"
         >{{ "handleLoginInfoFromVuexPOST" }}
       </el-button>
 
@@ -85,7 +85,7 @@ export default {
       }
     };
     return {
-      loginFormData: {
+      loginForm: {
         username: "abcde",
         password: "1111111",
         checked: false,

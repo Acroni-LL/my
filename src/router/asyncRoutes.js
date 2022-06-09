@@ -85,29 +85,6 @@ let asyncRoutes = [
           // title: "场地数据",
         },
       },
-      // {
-      //   path: "/user/location/planning",
-      //   component: () => import("@/views/user/location-planning"),
-      //   name: "userLocationPlanning",
-      //   meta: {
-      //     title: "定位规划",
-      //   },
-      // },
-      // {
-      //   path: "/user/map",
-      //   component: () => import("@/views/user/map"),
-      //   name: "userMap",
-      //   meta: {
-      //     title: "地图管理",
-      //   },
-      // },
-      // {
-      //   path: "/user/user/add",
-      //   name: "addUserView",
-      //   component: () => import("@/views/user/user/add-user/index"),
-      //   hidden: true,
-      //   meta: { title: "用户添加" },
-      // },
     ],
   },
 ];

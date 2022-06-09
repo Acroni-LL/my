@@ -22,3 +22,5 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+TODO 设置权限路由=== addRoutes+beforeEach ==== 获取用户角色，添加vuex，生成权限路由，设置vuex
