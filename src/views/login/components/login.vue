@@ -72,7 +72,6 @@
 // import { login } from "@/api/user";
 import axios from "axios";
 import { mapGetters } from "vuex";
-import { handleLoginRoleRouter } from "@/utils/usual";
 // import qs from "qs";
 export default {
   /* eslint-disable*/
@@ -86,16 +85,6 @@ export default {
       }
     };
     return {
-      loginForm: {
-        username: "abcde",
-        password: "1111111",
-        checked: false,
-      },
-      loginFormParams: {
-        username: "abcde",
-        password: "1111111",
-        checked: false,
-      },
       loginFormData: {
         username: "abcde",
         password: "1111111",
@@ -156,10 +145,7 @@ export default {
     },
     handleLoginInfoFromVuexPOST(params) {
       new Promise((resolve) => {
-        this.$store.dispatch("getUserInfo", params).then(() => {});
-        resolve();
-      }).then((resolve) => {
-        handleLoginRoleRouter();
+        this.$store.dispatch("getUserInfo", params);
         resolve();
       }).catch(err=>{
         new Error(err)
@@ -172,10 +158,6 @@ export default {
   watch: {},
   created() {},
   mounted() {
-    // imgTest()
-    // console.log(this.img.a);
-    // console.log(this.$refs.password);
-    // console.log(this.$refs.loginForm.validate());
   },
 };
 </script>

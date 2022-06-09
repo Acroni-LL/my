@@ -7,13 +7,14 @@ let asyncRoutes = [
   {
     path: "",
     component: Layout,
+    meta: { role: "1" },
     redirect: "/index",
     children: [
       {
         path: "/index",
         name: "index",
         component: () => import("@/views/dashboard/index"),
-        meta: { title: "首页", icon: "dashboard", affix: true },
+        meta: { title: "首页", icon: "dashboard", affix: true, role: "1" },
       },
     ],
   },
@@ -25,6 +26,7 @@ let asyncRoutes = [
     meta: {
       icon: "users",
       title: "用户数据",
+      role: "1",
     },
     children: [
       {
