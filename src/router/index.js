@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-
+import asyncRoutes from "./asyncRoutes";
 Vue.use(VueRouter);
 /* 
 ROLE
@@ -21,6 +21,7 @@ export const constantRoutes = [
 
 const router = new VueRouter({
   routes: constantRoutes,
+  asyncRoutes,
 });
 
 export function resetRouter(asyncRoutes) {

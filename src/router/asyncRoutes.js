@@ -3,7 +3,7 @@
 // import store from "@/store";
 // import Layout from "@/layout";
 
-let asyncRoutes = [
+const asyncRoutes = [
   {
     path: "/",
     component: () => import("@/layout"),
