@@ -1,3 +1,4 @@
+import router from "@/router";
 import store from "@/store";
 /**
  * @description 生成权限路由completed
@@ -41,8 +42,26 @@ export function genAuthRoutes(asyncRoutes) {
         return;
       }
     }
-    console.log("final _pRoutes:", _pRoutes);
+    // console.log("final _pRoutes:", _pRoutes);
   }
   return _pRoutes;
 }
 // todo 添加权限路由进vuex
+
+export function addRouteOneByOne() {
+  const roleRoutes = genAuthRoutes();
+  for (let i in roleRoutes) {
+    if (!roleRoutes[i].children) {
+      router.addRoute();
+    } else {
+      let _roleRoutes = JSON.parse(JSON.stringify(roleRoutes[i]));
+      _roleRoutes.children = null;
+      router.addRoute(_roleRoutes);
+      for (let j in roleRoutes[i].children[j]) {
+        router.addRoute(`${roleRoutes[i].name}`, roleRoutes[i].children[j]);
+      }
+    }
+  }
+  console.log(router);
+  return router;
+}

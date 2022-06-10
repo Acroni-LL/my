@@ -1,14 +1,14 @@
 // import { formatRoleRoutes } from "@/utils/usual";
 // import { hasToken } from "@/utils/usual";
 // import store from "@/store";
-import Layout from "@/layout";
+// import Layout from "@/layout";
 
 let asyncRoutes = [
   {
-    path: "",
-    component: Layout,
+    path: "/",
+    component: () => import("@/layout"),
     meta: { role: "1" },
-    redirect: "/index",
+    // redirect: "/index",
     children: [
       {
         path: "/index",
@@ -20,8 +20,9 @@ let asyncRoutes = [
   },
   {
     path: "/user",
-    component: Layout,
-    redirect: "/user/user",
+    component: () => import("@/layout"),
+
+    // redirect: "/user/user",
     name: "users",
     meta: {
       icon: "users",

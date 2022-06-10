@@ -64,6 +64,7 @@
       <el-checkbox v-model="loginForm.checked">{{
         userInfo.name || "baochi denglu"
       }}</el-checkbox>
+      <el-button @click="intoIndex">{{ "into index" }}</el-button>
     </el-form>
   </div>
 </template>
@@ -151,6 +152,9 @@ export default {
         new Error(err)
       });
     },
+    intoIndex(){
+      this.$router.push('/index')
+    }
   },
   computed: {
     ...mapGetters(["userInfo"]),

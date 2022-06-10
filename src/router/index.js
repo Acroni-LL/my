@@ -15,26 +15,22 @@ export const constantRoutes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "login" */ "../views/login/index.vue"),
+    component: () => import("../views/login/index.vue"),
   },
-
-  // {
-  //   path: "/test",
-  //   component: () => import("@/views/test/test1"),
-  // },
 ];
 
 const router = new VueRouter({
   routes: constantRoutes,
 });
 
-export function resetRouter(constantRoutes, asyncRoutes) {
+export function resetRouter(asyncRoutes) {
   const newRouter = () =>
     new VueRouter({
       routes: [...constantRoutes, ...asyncRoutes],
     });
   router.matcher = newRouter.matcher;
+  console.log("resetRouter:", router);
+  return router;
 }
 
 export default router;
