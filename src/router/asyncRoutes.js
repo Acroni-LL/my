@@ -5,10 +5,10 @@
 
 const asyncRoutes = [
   {
-    path: "/",
+    path: "",
     component: () => import("@/layout"),
     meta: { role: "1" },
-    // redirect: "/index",
+    redirect: "/index",
     children: [
       {
         path: "/index",
@@ -22,7 +22,7 @@ const asyncRoutes = [
     path: "/user",
     component: () => import("@/layout"),
 
-    // redirect: "/user/user",
+    redirect: "/user/user",
     name: "users",
     meta: {
       icon: "users",

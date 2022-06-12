@@ -20,8 +20,7 @@ export const constantRoutes = [
 ];
 
 const router = new VueRouter({
-  routes: constantRoutes,
-  asyncRoutes,
+  routes: [...constantRoutes, ...asyncRoutes],
 });
 
 export function resetRouter(asyncRoutes) {

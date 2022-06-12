@@ -3,7 +3,6 @@ import store from "@/store";
 import { removeTimeStamp, setTimeStamp } from "@/utils/auth";
 import router from "@/router";
 import { Message } from "element-ui";
-import { isCheckTimeOut } from "@/utils/timeOut";
 
 const service = axios.create({
   baseURL: process.env.VUE_APP_BASE_API,
@@ -14,21 +13,7 @@ const service = axios.create({
  * 请求拦截
  */
 service.interceptors.request.use(
-  async (config) => {
-    if (store.getters.token) {
-      if (isCheckTimeOut()) {
-        await store.dispatch("user/logout");
-        // 强制跳转到login
-        router.push("/login");
-        return Promise.reject(new Error("登录过长"));
-      }
-      // 请求头添加token
-      config.headers["Authorization"] = `Bearer ${store.getters.token}`;
-      // 请求体添加token
-      config.params = Object.assign({}, config.params, {
-        access_token: store.getters.token,
-      });
-    }
+  (config) => {
     // console.log(config);
     return config;
   },

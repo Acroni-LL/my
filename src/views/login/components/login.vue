@@ -65,12 +65,14 @@
         userInfo.name || "baochi denglu"
       }}</el-checkbox>
     </el-form>
+    <h1 style="color: #333">{{ nodeData }}</h1>
   </div>
 </template>
 
 <script>
 // import { login } from "@/api/user";
 import axios from "axios";
+import { getNode } from "@/api/test/login";
 import { mapGetters } from "vuex";
 // import qs from "qs";
 export default {
@@ -104,6 +106,7 @@ export default {
       btnText: "登录",
       btnStatus: false,
       validatorLogin: false,
+      nodeData:''
     };
   },
   methods: {
@@ -157,13 +160,21 @@ export default {
     },
     intoIndex(){
       this.$router.push('/index')
+    },
+    handleSome(){
+     getNode('/json','http://localhost:5000').then((res)=>{
+      console.log(res);
+      this.nodeData=res
+     })
     }
   },
   computed: {
     ...mapGetters(["userInfo"]),
   },
   watch: {},
-  created() {},
+  created() {
+    this.handleSome()
+  },
   mounted() {
   },
 };
